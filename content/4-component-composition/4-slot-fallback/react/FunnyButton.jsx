@@ -1,6 +1,4 @@
-import PropTypes from 'prop-types';
-
-export default function FunnyButton({ children }) {
+export default function FunnyButton({ children=<span>No content found</span> }) {
 	return (
 		<button
 			style={{
@@ -16,11 +14,7 @@ export default function FunnyButton({ children }) {
 				outline: '0',
 			}}
 		>
-			{children || <span>No content found</span>}
+			{children}
 		</button>
 	);
 }
-
-FunnyButton.propTypes = {
-	children: PropTypes.node,
-};
